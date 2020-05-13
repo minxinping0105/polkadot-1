@@ -18,22 +18,22 @@ parachain = { package = "polkadot-parachain", path = "../parachain" }
 polkadot-primitives = { path = "../primitives" }
 polkadot-erasure-coding = { path = "../erasure-coding" }
 table = { package = "polkadot-statement-table", path = "../statement-table" }
-grandpa = { package = "sc-finality-grandpa", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-inherents = { package = "sp-inherents", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-consensus = { package = "sp-consensus", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-primitives = { package = "sp-core", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-txpool-api = { package = "sp-transaction-pool", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-sp-timestamp = { git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-block-builder = { package = "sc-block-builder", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-trie = { package = "sp-trie", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-runtime_primitives = { package = "sp-runtime", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
+grandpa = { package = "sc-finality-grandpa", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+inherents = { package = "sp-inherents", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+consensus = { package = "sp-consensus", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+primitives = { package = "sp-core", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+txpool-api = { package = "sp-transaction-pool", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sp-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sp-timestamp = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+block-builder = { package = "sc-block-builder", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+trie = { package = "sp-trie", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+runtime_primitives = { package = "sp-runtime", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
 bitvec = { version = "0.17.4", default-features = false, features = ["alloc"] }
-runtime_babe = { package = "pallet-babe", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-babe-primitives = { package = "sp-consensus-babe", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
-keystore = { package = "sc-keystore", git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
+runtime_babe = { package = "pallet-babe", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+babe-primitives = { package = "sp-consensus-babe", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+keystore = { package = "sc-keystore", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
 
 [dev-dependencies]
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "cumulus-branch" }
+sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
