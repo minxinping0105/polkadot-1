@@ -4149,7 +4149,6 @@ dependencies = [
  "sp-core",
  "sp-keyring",
  "sp-runtime",
- "sp-transaction-pool",
  "tokio 0.2.19",
 ]
 

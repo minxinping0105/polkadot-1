@@ -200,14 +200,13 @@ pub async fn collate<P>(
 	Ok(collation)
 }
 
-pub fn build_collator_service<SP, P, C, E, R, Extrinsic, RuntimeApi, TransactionPool>(
+pub fn build_collator_service<SP, P, C, E, R, Extrinsic>(
 	spawner: SP,
 	handles: polkadot_service::FullNodeHandles,
 	client: Arc<C>,
 	para_id: ParaId,
 	key: Arc<CollatorPair>,
 	build_parachain_context: P,
-	service: Box<dyn AbstractService<Block = service::Block, Backend = service::TFullBackend<service::Block>, CallExecutor = service::TFullCallExecutor<service::Block, E>, RuntimeApi = RuntimeApi, SelectChain = service::LongestChain<service::TFullBackend<service::Block>, service::Block>, TransactionPool = TransactionPool, Client = C>>,
 ) -> Result<impl Future<Output = ()> + Send + 'static, polkadot_service::Error>
 	where
 		C: ClientProvider<
@@ -233,11 +232,7 @@ pub fn build_collator_service<SP, P, C, E, R, Extrinsic, RuntimeApi, Transaction
 		<P::ParachainContext as ParachainContext>::ProduceCandidate: Send,
 		Extrinsic: service::Codec + Send + Sync + 'static,
 		SP: Spawn + Clone + Send + Sync + 'static,
-		RuntimeApi: Send + Sync,
-		TransactionPool: sp_transaction_pool::TransactionPool<Block = service::Block> + sc_service::MallocSizeOfWasm,
 {
-	let client = service.client();
-
 	let polkadot_network = handles.polkadot_network
 		.ok_or_else(|| "Collator cannot run when Polkadot-specific networking has not been started")?;
 
