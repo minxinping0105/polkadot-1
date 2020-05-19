@@ -74,6 +74,7 @@ pub use service::RuntimeApiCollection;
 use sc_service::ClientProvider;
 pub use sc_cli::SubstrateCli;
 use sp_api::{ConstructRuntimeApi, ApiExt, HashFor};
+use sp_blockchain::HeaderBackend;
 
 const COLLATION_TIMEOUT: Duration = Duration::from_secs(30);
 
@@ -128,7 +129,7 @@ pub trait BuildParachainContext {
 		network: impl Network + Clone + 'static,
 	) -> Result<Self::ParachainContext, ()>
 		where
-			Client: ProvideRuntimeApi<Block> + Send + Sync + BlockchainEvents<Block> + 'static,
+			Client: ProvideRuntimeApi<Block> + Send + Sync + BlockchainEvents<Block> + 'static + HeaderBackend<Block>,
 			Client::Api: RuntimeApiCollection<Extrinsic>,
 			<Client::Api as ApiExt<Block>>::StateBackend: StateBackend<HashFor<Block>>,
 			Extrinsic: codec::Codec + Send + Sync + 'static,
