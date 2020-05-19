@@ -17,25 +17,25 @@ crate-type = ["cdylib", "rlib"]
 log = "0.4.8"
 futures = { version = "0.3.4", features = ["compat"] }
 structopt = "0.3.8"
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sc-client-db = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sc-executor = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sp-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sc-client-db = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sc-executor = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
 service = { package = "polkadot-service", path = "../service", default-features = false }
 
 tokio = { version = "0.2.13", features = ["rt-threaded"], optional = true }
-frame-benchmarking-cli = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator", optional = true }
-sc-cli = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator", optional = true }
-sc-service = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator", optional = true }
+frame-benchmarking-cli = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head", optional = true }
+sc-cli = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head", optional = true }
+sc-service = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head", optional = true }
 
 wasm-bindgen = { version = "0.2.57", optional = true }
 wasm-bindgen-futures = { version = "0.4.7", optional = true }
-browser-utils = { package = "substrate-browser-utils", git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator", optional = true }
+browser-utils = { package = "substrate-browser-utils", git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head", optional = true }
 
 [build-dependencies]
-substrate-build-script-utils = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+substrate-build-script-utils = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
 
 [features]
 default = [ "wasmtime", "db", "cli" ]

@@ -15,18 +15,18 @@ polkadot-validation = { path = "../validation" }
 polkadot-primitives = { path = "../primitives" }
 polkadot-erasure-coding = { path = "../erasure-coding" }
 codec = { package = "parity-scale-codec", version = "1.3.0", default-features = false, features = ["derive"] }
-sc-network = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sc-network-gossip = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sc-network = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sc-network-gossip = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
 futures = "0.3.4"
 log = "0.4.8"
 exit-future = "0.2.0"
 futures-timer = "2.0"
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sp-api = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
 wasm-timer = "0.2.4"
 
 [dev-dependencies]
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
-sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "cecton-use-custom-block-announce-validator" }
+sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
+sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "cecton-ensure-replay-parent-eq-relay-head" }
